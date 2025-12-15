@@ -37,6 +37,11 @@ namespace FinalProject.Repositories
             if (student.Schedule != null && student.Schedule.Count > 0)
 
                 student.ScheduleJson = JsonConvert.SerializeObject(student.Schedule);
+            if (student.AcademicRecord != null)
+                student.AcademicRecordJson =
+                    JsonConvert.SerializeObject(student.AcademicRecord);
+
+           
 
 
             _dbContext.Connection.Insert(student);
@@ -93,6 +98,14 @@ namespace FinalProject.Repositories
                 {
                     student.Schedule = new Dictionary<string, List<ScheduleEntry>>();
                 }
+                if (student != null && !string.IsNullOrEmpty(student.AcademicRecordJson))
+                {
+                    student.AcademicRecord =
+                        JsonConvert.DeserializeObject<
+                            Dictionary<string, Dictionary<string, (int Units, double? Grade)>>>
+                            (student.AcademicRecordJson);
+                }
+
 
             }
             return student;
@@ -153,6 +166,14 @@ namespace FinalProject.Repositories
                         JsonConvert.DeserializeObject<Dictionary<string, int>>(student.AbsencesJson);
                 else
                     student.SubjectsAbsences = new Dictionary<string, int>();
+                if (!string.IsNullOrEmpty(student.AcademicRecordJson))
+                    student.AcademicRecord =
+                        JsonConvert.DeserializeObject<
+                            Dictionary<string, Dictionary<string, (int Units, double? Grade)>>>
+                            (student.AcademicRecordJson);
+                else
+                    student.AcademicRecord =
+                        new Dictionary<string, Dictionary<string, (int Units, double? Grade)>>();
             }
 
             return student;

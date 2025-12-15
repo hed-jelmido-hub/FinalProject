@@ -91,8 +91,7 @@ namespace FinalProject
                 MessageBox.Show($"Welcome {student.FirstName}!", "Loading Account..." ,
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                
-                USPSDashboard dashboard = new USPSDashboard(student); 
+                USPSDashboard dashboard = new USPSDashboard(Program.studRepo, student);
                 dashboard.Show(); 
                 this.Hide(); 
             }

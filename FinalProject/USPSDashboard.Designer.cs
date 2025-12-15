@@ -48,9 +48,15 @@ namespace FinalProject
             panel1 = new Panel();
             labelTotalAbscences = new Label();
             tabPage1 = new TabPage();
+            button2 = new Button();
+            label14 = new Label();
+            pictureBox3 = new PictureBox();
             StudentPicture = new PictureBox();
             TabControl1 = new TabControl();
             tabPage2 = new TabPage();
+            button1 = new Button();
+            pictureBox2 = new PictureBox();
+            label13 = new Label();
             labelAbsences = new Label();
             label12 = new Label();
             flowLayoutPanelSchedule = new FlowLayoutPanel();
@@ -69,50 +75,50 @@ namespace FinalProject
             label9 = new Label();
             tableLayoutPanelGrades = new TableLayoutPanel();
             tabPage3 = new TabPage();
-            label13 = new Label();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            label14 = new Label();
-            pictureBox4 = new PictureBox();
+            btnLogOut = new Button();
+            flowLayoutPanelTab3 = new FlowLayoutPanel();
             label16 = new Label();
+            pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)StudentPicture).BeginInit();
             TabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tableLayoutPanelBalance.SuspendLayout();
             flowLayoutPanelAbsences.SuspendLayout();
             tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(14, 94);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(18, 118);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(142, 184);
+            pictureBox1.Size = new Size(178, 230);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(177, 122);
+            label1.Location = new Point(221, 152);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(0, 20);
+            label1.Size = new Size(0, 25);
             label1.TabIndex = 1;
             label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(177, 176);
+            label2.Location = new Point(221, 220);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(27, 20);
+            label2.Size = new Size(34, 25);
             label2.TabIndex = 2;
             label2.Text = "ID:";
             label2.Click += label2_Click;
@@ -120,18 +126,20 @@ namespace FinalProject
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(177, 230);
+            label3.Location = new Point(221, 288);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(91, 20);
+            label3.Size = new Size(110, 25);
             label3.TabIndex = 3;
             label3.Text = "Course-Year:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(14, 328);
+            label4.Location = new Point(18, 410);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(126, 20);
+            label4.Size = new Size(150, 25);
             label4.TabIndex = 4;
             label4.Text = "Account Balance: ";
             label4.Click += label4_Click;
@@ -139,9 +147,10 @@ namespace FinalProject
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(177, 122);
+            label5.Location = new Point(221, 152);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(52, 20);
+            label5.Size = new Size(63, 25);
             label5.TabIndex = 5;
             label5.Text = "Name:";
             label5.Click += label5_Click;
@@ -149,27 +158,30 @@ namespace FinalProject
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(14, 434);
+            label6.Location = new Point(18, 542);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(119, 20);
+            label6.Size = new Size(142, 25);
             label6.TabIndex = 6;
             label6.Text = "Total Abscences ";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(14, 548);
+            label7.Location = new Point(18, 685);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(82, 20);
+            label7.Size = new Size(98, 25);
             label7.TabIndex = 7;
             label7.Text = "Total Units:";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(14, 694);
+            label8.Location = new Point(18, 868);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(93, 20);
+            label8.Size = new Size(110, 25);
             label8.TabIndex = 8;
             label8.Text = "Total Grade: ";
             // 
@@ -177,9 +189,10 @@ namespace FinalProject
             // 
             labelTotalUnits.AutoSize = true;
             labelTotalUnits.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelTotalUnits.Location = new Point(3, 69);
+            labelTotalUnits.Location = new Point(4, 86);
+            labelTotalUnits.Margin = new Padding(4, 0, 4, 0);
             labelTotalUnits.Name = "labelTotalUnits";
-            labelTotalUnits.Size = new Size(143, 32);
+            labelTotalUnits.Size = new Size(165, 38);
             labelTotalUnits.TabIndex = 7;
             labelTotalUnits.Text = "Total Units:";
             labelTotalUnits.Click += labelTotalUnits_Click;
@@ -188,9 +201,10 @@ namespace FinalProject
             // 
             labelUSPSName.AutoSize = true;
             labelUSPSName.Font = new Font("Segoe UI Emoji", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelUSPSName.Location = new Point(335, 125);
+            labelUSPSName.Location = new Point(419, 156);
+            labelUSPSName.Margin = new Padding(4, 0, 4, 0);
             labelUSPSName.Name = "labelUSPSName";
-            labelUSPSName.Size = new Size(88, 32);
+            labelUSPSName.Size = new Size(102, 37);
             labelUSPSName.TabIndex = 14;
             labelUSPSName.Text = "Name:";
             // 
@@ -198,9 +212,10 @@ namespace FinalProject
             // 
             labelUSPSCourseAndYear.AutoSize = true;
             labelUSPSCourseAndYear.Font = new Font("Segoe UI Emoji", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelUSPSCourseAndYear.Location = new Point(335, 189);
+            labelUSPSCourseAndYear.Location = new Point(419, 236);
+            labelUSPSCourseAndYear.Margin = new Padding(4, 0, 4, 0);
             labelUSPSCourseAndYear.Name = "labelUSPSCourseAndYear";
-            labelUSPSCourseAndYear.Size = new Size(209, 32);
+            labelUSPSCourseAndYear.Size = new Size(241, 37);
             labelUSPSCourseAndYear.TabIndex = 13;
             labelUSPSCourseAndYear.Text = "Course and Year:";
             labelUSPSCourseAndYear.Click += labelUSPSCourseAndYear_Click;
@@ -209,9 +224,10 @@ namespace FinalProject
             // 
             labelTotalGrade.AutoSize = true;
             labelTotalGrade.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelTotalGrade.Location = new Point(3, 101);
+            labelTotalGrade.Location = new Point(4, 126);
+            labelTotalGrade.Margin = new Padding(4, 0, 4, 0);
             labelTotalGrade.Name = "labelTotalGrade";
-            labelTotalGrade.Size = new Size(159, 32);
+            labelTotalGrade.Size = new Size(183, 38);
             labelTotalGrade.TabIndex = 8;
             labelTotalGrade.Text = "Total Grade: ";
             labelTotalGrade.Click += labelTotalGrade_Click;
@@ -220,9 +236,10 @@ namespace FinalProject
             // 
             labelAccountBalance.AutoSize = true;
             labelAccountBalance.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelAccountBalance.Location = new Point(3, 6);
+            labelAccountBalance.Location = new Point(4, 8);
+            labelAccountBalance.Margin = new Padding(4, 0, 4, 0);
             labelAccountBalance.Name = "labelAccountBalance";
-            labelAccountBalance.Size = new Size(218, 32);
+            labelAccountBalance.Size = new Size(250, 38);
             labelAccountBalance.TabIndex = 4;
             labelAccountBalance.Text = "Account Balance: ";
             labelAccountBalance.Click += labelAccountBalance_Click;
@@ -231,18 +248,20 @@ namespace FinalProject
             // 
             labelUSPSId.AutoSize = true;
             labelUSPSId.Font = new Font("Segoe UI Emoji", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelUSPSId.Location = new Point(335, 157);
+            labelUSPSId.Location = new Point(419, 196);
+            labelUSPSId.Margin = new Padding(4, 0, 4, 0);
             labelUSPSId.Name = "labelUSPSId";
-            labelUSPSId.Size = new Size(45, 32);
+            labelUSPSId.Size = new Size(53, 37);
             labelUSPSId.TabIndex = 12;
             labelUSPSId.Text = "ID:";
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(177, 70);
+            label15.Location = new Point(221, 88);
+            label15.Margin = new Padding(4, 0, 4, 0);
             label15.Name = "label15";
-            label15.Size = new Size(0, 20);
+            label15.Size = new Size(0, 25);
             label15.TabIndex = 11;
             // 
             // panel1
@@ -251,10 +270,10 @@ namespace FinalProject
             panel1.Controls.Add(labelAccountBalance);
             panel1.Controls.Add(labelTotalUnits);
             panel1.Controls.Add(labelTotalAbscences);
-            panel1.Location = new Point(137, 244);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(171, 305);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(578, 478);
+            panel1.Size = new Size(722, 598);
             panel1.TabIndex = 15;
             panel1.Paint += panel1_Paint;
             // 
@@ -262,9 +281,10 @@ namespace FinalProject
             // 
             labelTotalAbscences.AutoSize = true;
             labelTotalAbscences.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelTotalAbscences.Location = new Point(3, 37);
+            labelTotalAbscences.Location = new Point(4, 46);
+            labelTotalAbscences.Margin = new Padding(4, 0, 4, 0);
             labelTotalAbscences.Name = "labelTotalAbscences";
-            labelTotalAbscences.Size = new Size(210, 32);
+            labelTotalAbscences.Size = new Size(239, 38);
             labelTotalAbscences.TabIndex = 6;
             labelTotalAbscences.Text = "Total Abscences: ";
             labelTotalAbscences.Click += labelTotalAbscences_Click;
@@ -273,6 +293,7 @@ namespace FinalProject
             // 
             tabPage1.BackgroundImage = Properties.Resources.Untitled_design__1_1;
             tabPage1.BackgroundImageLayout = ImageLayout.Stretch;
+            tabPage1.Controls.Add(button2);
             tabPage1.Controls.Add(label14);
             tabPage1.Controls.Add(pictureBox3);
             tabPage1.Controls.Add(labelUSPSName);
@@ -281,22 +302,54 @@ namespace FinalProject
             tabPage1.Controls.Add(label15);
             tabPage1.Controls.Add(StudentPicture);
             tabPage1.Controls.Add(panel1);
-            tabPage1.Location = new Point(4, 29);
-            tabPage1.Margin = new Padding(3, 4, 3, 4);
+            tabPage1.Location = new Point(4, 34);
+            tabPage1.Margin = new Padding(4, 5, 4, 5);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3, 4, 3, 4);
-            tabPage1.Size = new Size(946, 1022);
+            tabPage1.Padding = new Padding(4, 5, 4, 5);
+            tabPage1.Size = new Size(1184, 1012);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Summary";
             tabPage1.UseVisualStyleBackColor = true;
             tabPage1.Click += tabPage1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(1069, 8);
+            button2.Name = "button2";
+            button2.Size = new Size(112, 34);
+            button2.TabIndex = 18;
+            button2.Text = "Log Out";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.Location = new Point(538, 66);
+            label14.Margin = new Padding(4, 0, 4, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(562, 32);
+            label14.TabIndex = 17;
+            label14.Text = "Saint Mary's University Bayombong, Philippines";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.Saint_Mary_s_University_Main_Emblem_1_1536x1536;
+            pictureBox3.Location = new Point(419, 46);
+            pictureBox3.Margin = new Padding(4);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(111, 78);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 16;
+            pictureBox3.TabStop = false;
+            // 
             // StudentPicture
             // 
-            StudentPicture.Location = new Point(137, 37);
-            StudentPicture.Margin = new Padding(3, 4, 3, 4);
+            StudentPicture.Location = new Point(171, 46);
+            StudentPicture.Margin = new Padding(4, 5, 4, 5);
             StudentPicture.Name = "StudentPicture";
-            StudentPicture.Size = new Size(170, 184);
+            StudentPicture.Size = new Size(212, 230);
             StudentPicture.TabIndex = 10;
             StudentPicture.TabStop = false;
             // 
@@ -307,16 +360,17 @@ namespace FinalProject
             TabControl1.Controls.Add(tabPage3);
             TabControl1.Dock = DockStyle.Fill;
             TabControl1.Location = new Point(0, 0);
-            TabControl1.Margin = new Padding(3, 4, 3, 4);
+            TabControl1.Margin = new Padding(4, 5, 4, 5);
             TabControl1.Name = "TabControl1";
             TabControl1.SelectedIndex = 0;
-            TabControl1.Size = new Size(954, 1055);
+            TabControl1.Size = new Size(1192, 1050);
             TabControl1.TabIndex = 9;
             // 
             // tabPage2
             // 
             tabPage2.BackgroundImage = Properties.Resources.Untitled_design__1_;
             tabPage2.BackgroundImageLayout = ImageLayout.Stretch;
+            tabPage2.Controls.Add(button1);
             tabPage2.Controls.Add(pictureBox2);
             tabPage2.Controls.Add(label13);
             tabPage2.Controls.Add(labelAbsences);
@@ -327,24 +381,57 @@ namespace FinalProject
             tabPage2.Controls.Add(label10);
             tabPage2.Controls.Add(flowLayoutPanelAbsences);
             tabPage2.Controls.Add(tableLayoutPanelGrades);
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Margin = new Padding(3, 4, 3, 4);
+            tabPage2.Location = new Point(4, 34);
+            tabPage2.Margin = new Padding(4, 5, 4, 5);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3, 4, 3, 4);
-            tabPage2.Size = new Size(946, 1022);
+            tabPage2.Padding = new Padding(4, 5, 4, 5);
+            tabPage2.Size = new Size(1184, 1012);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Overview";
             tabPage2.UseVisualStyleBackColor = true;
             tabPage2.Click += tabPage2_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(1064, 8);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 16;
+            button1.Text = "Log Out";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.Saint_Mary_s_University_Main_Emblem_1_1536x1536;
+            pictureBox2.Location = new Point(127, 9);
+            pictureBox2.Margin = new Padding(4);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(111, 78);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 11;
+            pictureBox2.TabStop = false;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(245, 29);
+            label13.Margin = new Padding(4, 0, 4, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(562, 32);
+            label13.TabIndex = 10;
+            label13.Text = "Saint Mary's University Bayombong, Philippines";
+            label13.Click += label13_Click;
+            // 
             // labelAbsences
             // 
             labelAbsences.AutoSize = true;
             labelAbsences.Font = new Font("Segoe UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            labelAbsences.Location = new Point(134, 637);
+            labelAbsences.Location = new Point(168, 796);
             labelAbsences.Margin = new Padding(2, 0, 2, 0);
             labelAbsences.Name = "labelAbsences";
-            labelAbsences.Size = new Size(133, 32);
+            labelAbsences.Size = new Size(155, 38);
             labelAbsences.TabIndex = 2;
             labelAbsences.Text = "ABSENCES";
             labelAbsences.Click += labelAbsences_Click;
@@ -353,10 +440,10 @@ namespace FinalProject
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label12.Location = new Point(131, 340);
+            label12.Location = new Point(164, 425);
             label12.Margin = new Padding(2, 0, 2, 0);
             label12.Name = "label12";
-            label12.Size = new Size(133, 32);
+            label12.Size = new Size(156, 38);
             label12.TabIndex = 9;
             label12.Text = "SCHEDULE";
             // 
@@ -364,10 +451,10 @@ namespace FinalProject
             // 
             flowLayoutPanelSchedule.AutoScroll = true;
             flowLayoutPanelSchedule.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanelSchedule.Location = new Point(134, 384);
+            flowLayoutPanelSchedule.Location = new Point(168, 480);
             flowLayoutPanelSchedule.Margin = new Padding(2);
             flowLayoutPanelSchedule.Name = "flowLayoutPanelSchedule";
-            flowLayoutPanelSchedule.Size = new Size(770, 238);
+            flowLayoutPanelSchedule.Size = new Size(962, 298);
             flowLayoutPanelSchedule.TabIndex = 8;
             flowLayoutPanelSchedule.WrapContents = false;
             flowLayoutPanelSchedule.Paint += flowLayoutPanelSchedule_Paint;
@@ -376,10 +463,10 @@ namespace FinalProject
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label11.Location = new Point(395, 155);
+            label11.Location = new Point(508, 130);
             label11.Margin = new Padding(2, 0, 2, 0);
             label11.Name = "label11";
-            label11.Size = new Size(103, 28);
+            label11.Size = new Size(123, 32);
             label11.TabIndex = 7;
             label11.Text = "BALANCE";
             // 
@@ -398,25 +485,25 @@ namespace FinalProject
             tableLayoutPanelBalance.Controls.Add(labelMidTermV, 1, 1);
             tableLayoutPanelBalance.Controls.Add(labelFinalsV, 1, 2);
             tableLayoutPanelBalance.Controls.Add(labelMidYearV, 1, 3);
-            tableLayoutPanelBalance.Location = new Point(395, 185);
+            tableLayoutPanelBalance.Location = new Point(508, 167);
             tableLayoutPanelBalance.Margin = new Padding(2);
             tableLayoutPanelBalance.Name = "tableLayoutPanelBalance";
             tableLayoutPanelBalance.RowCount = 4;
             tableLayoutPanelBalance.RowStyles.Add(new RowStyle(SizeType.Percent, 54.60993F));
             tableLayoutPanelBalance.RowStyles.Add(new RowStyle(SizeType.Percent, 45.39007F));
-            tableLayoutPanelBalance.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
-            tableLayoutPanelBalance.RowStyles.Add(new RowStyle(SizeType.Absolute, 36F));
-            tableLayoutPanelBalance.Size = new Size(509, 154);
+            tableLayoutPanelBalance.RowStyles.Add(new RowStyle(SizeType.Absolute, 41F));
+            tableLayoutPanelBalance.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
+            tableLayoutPanelBalance.Size = new Size(636, 192);
             tableLayoutPanelBalance.TabIndex = 6;
             tableLayoutPanelBalance.Paint += tableLayoutPanelBalance_Paint;
             // 
             // labelMidTerm
             // 
             labelMidTerm.AutoSize = true;
-            labelMidTerm.Location = new Point(3, 45);
+            labelMidTerm.Location = new Point(3, 57);
             labelMidTerm.Margin = new Padding(2, 0, 2, 0);
             labelMidTerm.Name = "labelMidTerm";
-            labelMidTerm.Size = new Size(66, 20);
+            labelMidTerm.Size = new Size(80, 25);
             labelMidTerm.TabIndex = 1;
             labelMidTerm.Text = "Midterm";
             labelMidTerm.Click += labelMidTerm_Click;
@@ -424,10 +511,10 @@ namespace FinalProject
             // labelFinals
             // 
             labelFinals.AutoSize = true;
-            labelFinals.Location = new Point(3, 82);
+            labelFinals.Location = new Point(3, 103);
             labelFinals.Margin = new Padding(2, 0, 2, 0);
             labelFinals.Name = "labelFinals";
-            labelFinals.Size = new Size(46, 20);
+            labelFinals.Size = new Size(56, 25);
             labelFinals.TabIndex = 2;
             labelFinals.Text = "Finals";
             labelFinals.Click += labelFinals_Click;
@@ -435,10 +522,10 @@ namespace FinalProject
             // labelMidYear
             // 
             labelMidYear.AutoSize = true;
-            labelMidYear.Location = new Point(3, 116);
+            labelMidYear.Location = new Point(3, 145);
             labelMidYear.Margin = new Padding(2, 0, 2, 0);
             labelMidYear.Name = "labelMidYear";
-            labelMidYear.Size = new Size(67, 20);
+            labelMidYear.Size = new Size(80, 25);
             labelMidYear.TabIndex = 3;
             labelMidYear.Text = "Mid Year";
             labelMidYear.Click += labelMidYear_Click;
@@ -446,10 +533,10 @@ namespace FinalProject
             // labelFirstTermV
             // 
             labelFirstTermV.AutoSize = true;
-            labelFirstTermV.Location = new Point(257, 1);
+            labelFirstTermV.Location = new Point(320, 1);
             labelFirstTermV.Margin = new Padding(2, 0, 2, 0);
             labelFirstTermV.Name = "labelFirstTermV";
-            labelFirstTermV.Size = new Size(18, 20);
+            labelFirstTermV.Size = new Size(23, 25);
             labelFirstTermV.TabIndex = 4;
             labelFirstTermV.Text = "₱";
             labelFirstTermV.Click += labelFirstTermV_Click;
@@ -460,7 +547,7 @@ namespace FinalProject
             labelFirstTerm.Location = new Point(3, 1);
             labelFirstTerm.Margin = new Padding(2, 0, 2, 0);
             labelFirstTerm.Name = "labelFirstTerm";
-            labelFirstTerm.Size = new Size(73, 20);
+            labelFirstTerm.Size = new Size(88, 25);
             labelFirstTerm.TabIndex = 0;
             labelFirstTerm.Text = "First Term";
             labelFirstTerm.Click += labelFirstTerm_Click;
@@ -468,10 +555,10 @@ namespace FinalProject
             // labelMidTermV
             // 
             labelMidTermV.AutoSize = true;
-            labelMidTermV.Location = new Point(257, 45);
+            labelMidTermV.Location = new Point(320, 57);
             labelMidTermV.Margin = new Padding(2, 0, 2, 0);
             labelMidTermV.Name = "labelMidTermV";
-            labelMidTermV.Size = new Size(18, 20);
+            labelMidTermV.Size = new Size(23, 25);
             labelMidTermV.TabIndex = 5;
             labelMidTermV.Text = "₱";
             labelMidTermV.Click += labelMidTermV_Click;
@@ -479,10 +566,10 @@ namespace FinalProject
             // labelFinalsV
             // 
             labelFinalsV.AutoSize = true;
-            labelFinalsV.Location = new Point(257, 82);
+            labelFinalsV.Location = new Point(320, 103);
             labelFinalsV.Margin = new Padding(2, 0, 2, 0);
             labelFinalsV.Name = "labelFinalsV";
-            labelFinalsV.Size = new Size(18, 20);
+            labelFinalsV.Size = new Size(23, 25);
             labelFinalsV.TabIndex = 6;
             labelFinalsV.Text = "₱";
             labelFinalsV.Click += labelFinalsV_Click;
@@ -490,10 +577,10 @@ namespace FinalProject
             // labelMidYearV
             // 
             labelMidYearV.AutoSize = true;
-            labelMidYearV.Location = new Point(257, 116);
+            labelMidYearV.Location = new Point(320, 145);
             labelMidYearV.Margin = new Padding(2, 0, 2, 0);
             labelMidYearV.Name = "labelMidYearV";
-            labelMidYearV.Size = new Size(18, 20);
+            labelMidYearV.Size = new Size(23, 25);
             labelMidYearV.TabIndex = 7;
             labelMidYearV.Text = "₱";
             labelMidYearV.Click += labelMidYearV_Click;
@@ -502,20 +589,20 @@ namespace FinalProject
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label10.Location = new Point(131, 155);
+            label10.Location = new Point(178, 130);
             label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
-            label10.Size = new Size(245, 28);
+            label10.Size = new Size(296, 32);
             label10.TabIndex = 5;
             label10.Text = "FINAL GRADE SUMMARY";
             // 
             // flowLayoutPanelAbsences
             // 
             flowLayoutPanelAbsences.Controls.Add(label9);
-            flowLayoutPanelAbsences.Location = new Point(134, 682);
+            flowLayoutPanelAbsences.Location = new Point(168, 852);
             flowLayoutPanelAbsences.Margin = new Padding(2);
             flowLayoutPanelAbsences.Name = "flowLayoutPanelAbsences";
-            flowLayoutPanelAbsences.Size = new Size(715, 312);
+            flowLayoutPanelAbsences.Size = new Size(894, 390);
             flowLayoutPanelAbsences.TabIndex = 1;
             flowLayoutPanelAbsences.Paint += flowLayoutPanelAbsences_Paint;
             // 
@@ -525,7 +612,7 @@ namespace FinalProject
             label9.Location = new Point(2, 0);
             label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new Size(50, 20);
+            label9.Size = new Size(59, 25);
             label9.TabIndex = 0;
             label9.Text = "label9";
             // 
@@ -537,92 +624,76 @@ namespace FinalProject
             tableLayoutPanelGrades.ColumnCount = 2;
             tableLayoutPanelGrades.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanelGrades.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanelGrades.Location = new Point(131, 185);
+            tableLayoutPanelGrades.Location = new Point(178, 167);
             tableLayoutPanelGrades.Margin = new Padding(2);
             tableLayoutPanelGrades.Name = "tableLayoutPanelGrades";
-            tableLayoutPanelGrades.Size = new Size(255, 153);
+            tableLayoutPanelGrades.Size = new Size(319, 191);
             tableLayoutPanelGrades.TabIndex = 4;
             // 
             // tabPage3
             // 
             tabPage3.BackgroundImage = Properties.Resources.Untitled_design__1_;
+            tabPage3.Controls.Add(btnLogOut);
+            tabPage3.Controls.Add(flowLayoutPanelTab3);
             tabPage3.Controls.Add(label16);
             tabPage3.Controls.Add(pictureBox4);
-            tabPage3.Location = new Point(4, 29);
+            tabPage3.Location = new Point(4, 34);
             tabPage3.Margin = new Padding(2);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(2);
-            tabPage3.Size = new Size(946, 1022);
+            tabPage3.Size = new Size(1184, 1012);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Subjects";
             tabPage3.UseVisualStyleBackColor = true;
+            tabPage3.Click += tabPage3_Click;
             // 
-            // label13
+            // btnLogOut
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(373, 55);
-            label13.Name = "label13";
-            label13.Size = new Size(466, 28);
-            label13.TabIndex = 10;
-            label13.Text = "Saint Mary's University Bayombong, Philippines";
-            label13.Click += label13_Click;
+            btnLogOut.Location = new Point(967, 5);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(112, 34);
+            btnLogOut.TabIndex = 15;
+            btnLogOut.Text = "Log Out";
+            btnLogOut.UseVisualStyleBackColor = true;
+            btnLogOut.Click += btnLogOut_Click;
             // 
-            // pictureBox2
+            // flowLayoutPanelTab3
             // 
-            pictureBox2.Image = Properties.Resources.Saint_Mary_s_University_Main_Emblem_1_1536x1536;
-            pictureBox2.Location = new Point(278, 39);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(89, 62);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 11;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.Saint_Mary_s_University_Main_Emblem_1_1536x1536;
-            pictureBox3.Location = new Point(335, 37);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(89, 62);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 16;
-            pictureBox3.TabStop = false;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(430, 53);
-            label14.Name = "label14";
-            label14.Size = new Size(466, 28);
-            label14.TabIndex = 17;
-            label14.Text = "Saint Mary's University Bayombong, Philippines";
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.Saint_Mary_s_University_Main_Emblem_1_1536x1536;
-            pictureBox4.Location = new Point(268, 51);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(89, 62);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 12;
-            pictureBox4.TabStop = false;
+            flowLayoutPanelTab3.AutoScroll = true;
+            flowLayoutPanelTab3.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanelTab3.Location = new Point(123, 170);
+            flowLayoutPanelTab3.Name = "flowLayoutPanelTab3";
+            flowLayoutPanelTab3.Size = new Size(946, 689);
+            flowLayoutPanelTab3.TabIndex = 14;
+            flowLayoutPanelTab3.WrapContents = false;
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(363, 65);
+            label16.Location = new Point(454, 81);
+            label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
-            label16.Size = new Size(466, 28);
+            label16.Size = new Size(562, 32);
             label16.TabIndex = 13;
             label16.Text = "Saint Mary's University Bayombong, Philippines";
             // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.Saint_Mary_s_University_Main_Emblem_1_1536x1536;
+            pictureBox4.Location = new Point(335, 64);
+            pictureBox4.Margin = new Padding(4);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(111, 78);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 12;
+            pictureBox4.TabStop = false;
+            // 
             // USPSDashboard
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(954, 1055);
+            ClientSize = new Size(1192, 1050);
             Controls.Add(TabControl1);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -633,7 +704,7 @@ namespace FinalProject
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "USPSDashboard";
             Text = "Unified Student Profile System (USPS)";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -641,18 +712,18 @@ namespace FinalProject
             panel1.PerformLayout();
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)StudentPicture).EndInit();
             TabControl1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tableLayoutPanelBalance.ResumeLayout(false);
             tableLayoutPanelBalance.PerformLayout();
             flowLayoutPanelAbsences.ResumeLayout(false);
             flowLayoutPanelAbsences.PerformLayout();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -710,5 +781,9 @@ namespace FinalProject
         private PictureBox pictureBox3;
         private Label label16;
         private PictureBox pictureBox4;
+        private FlowLayoutPanel flowLayoutPanelTab3;
+        private Button btnLogOut;
+        private Button button1;
+        private Button button2;
     }
 }

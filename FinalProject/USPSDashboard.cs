@@ -1,14 +1,20 @@
 ﻿using FinalProject.Models;
+using FinalProject.Repositories;
+using static FinalProject.Models.Student;
 
 namespace FinalProject
 {
     public partial class USPSDashboard : Form
     {
         private Student _student;
+        private readonly IStudentRepository _studRepo;
 
-        public USPSDashboard(Student student)
+
+
+        public USPSDashboard(IStudentRepository studRepo, Student student)
         {
             InitializeComponent();
+            _studRepo = studRepo;
             _student = student;
             LoadDashboardData();
             LoadAbsencesTab();
@@ -16,8 +22,124 @@ namespace FinalProject
             GetStudentSchedule();
             LoadTotalUnits();
             LoadScheduleTab(_student);
+            LoadTab3AcademicOverview();
             //LoadGradesTab();
 
+        }
+        private void LoadTab3AcademicOverview()
+        {
+            flowLayoutPanelTab3.Controls.Clear();
+            flowLayoutPanelTab3.AutoScroll = true;
+
+            if (_student?.AcademicRecord == null)
+                return;
+
+            // Group by Year (key before '-')
+            var groupedByYear = _student.AcademicRecord
+                .GroupBy(k => k.Key.Split('-')[0].Trim());
+
+            foreach (var yearGroup in groupedByYear)
+            {
+                // Year label
+                Label yearLabel = new Label
+                {
+                    Text = yearGroup.Key, // e.g., "1st Year"
+                    Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                    AutoSize = true,
+                    Margin = new Padding(10)
+                };
+                flowLayoutPanelTab3.Controls.Add(yearLabel);
+
+                // Row for semesters
+                FlowLayoutPanel semesterRow = new FlowLayoutPanel
+                {
+                    FlowDirection = FlowDirection.LeftToRight,
+                    AutoSize = true,
+                    Margin = new Padding(20, 5, 0, 20)
+                };
+
+                foreach (var semester in yearGroup)
+                {
+                    Panel semesterPanel = CreateSemesterPanel(
+                        semester.Key,       // e.g., "1st Year - 1st Semester"
+                        semester.Value      // Dictionary<string, (Units, Grade)>
+                    );
+                    semesterRow.Controls.Add(semesterPanel);
+                }
+
+                flowLayoutPanelTab3.Controls.Add(semesterRow);
+            }
+        }
+        private Panel CreateSemesterPanel(string semesterName, Dictionary<string, (int Units, double? Grade)> subjects)
+        {
+            Panel panel = new Panel
+            {
+                AutoSize = true,
+                AutoSizeMode = AutoSizeMode.GrowAndShrink,
+                Margin = new Padding(30, 0, 10, 10)
+            };
+
+            // Optional: show semester name on top of this panel
+            Label lblSemester = new Label
+            {
+                Text = semesterName,
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                AutoSize = true,
+                Margin = new Padding(0, 0, 0, 5)
+            };
+            panel.Controls.Add(lblSemester);
+
+            TableLayoutPanel table = new TableLayoutPanel
+            {
+                ColumnCount = 3,
+                AutoSize = true,
+                AutoSizeMode = AutoSizeMode.GrowAndShrink
+            };
+
+            table.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize)); // Grade
+            table.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize)); // Subject
+            table.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize)); // Units
+
+            // Header row
+            table.Controls.Add(new Label { Text = "Grade", Font = new Font("Segoe UI", 9, FontStyle.Bold), Margin = new Padding(5) }, 0, 0);
+            table.Controls.Add(new Label { Text = "Subject", Font = new Font("Segoe UI", 9, FontStyle.Bold), Margin = new Padding(5) }, 1, 0);
+            table.Controls.Add(new Label { Text = "Units", Font = new Font("Segoe UI", 9, FontStyle.Bold), Margin = new Padding(5) }, 2, 0);
+
+            int row = 1;
+            foreach (var subj in subjects)
+            {
+                var lblGrade = new Label
+                {
+                    Text = subj.Value.Grade?.ToString() ?? "-",
+                    BackColor = subj.Value.Grade.HasValue && subj.Value.Grade.Value < 75 ? Color.Tomato : Color.Transparent,
+                    Margin = new Padding(5),
+                    AutoSize = true
+                };
+
+                var lblSubject = new Label
+                {
+                    Text = subj.Key,
+                    Margin = new Padding(5),
+                    AutoSize = true
+                };
+
+                var lblUnits = new Label
+                {
+                    Text = subj.Value.Units.ToString(),
+                    Margin = new Padding(5),
+                    AutoSize = true
+                };
+
+                table.Controls.Add(lblGrade, 0, row);
+                table.Controls.Add(lblSubject, 1, row);
+                table.Controls.Add(lblUnits, 2, row);
+
+                table.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+                row++;
+            }
+
+            panel.Controls.Add(table);
+            return panel;
         }
         private void LoadDashboardData()
         {
@@ -550,6 +672,39 @@ namespace FinalProject
         private void label13_Click(object sender, EventArgs e)
         {
 
+        }
+        private void tabPage3_Enter(object sender, EventArgs e)
+        {
+            LoadTab3AcademicOverview();
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you",
+                  "Log out Successful", MessageBoxButtons.OK,
+                  MessageBoxIcon.Information);
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you",
+                              "Log out Successful", MessageBoxButtons.OK,
+                              MessageBoxIcon.Information);
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you",
+                              "Log out Successful", MessageBoxButtons.OK,
+                              MessageBoxIcon.Information);
+            Application.Exit();
         }
     }
 }

@@ -72,6 +72,65 @@ namespace FinalProject
                     { "Calculus", 2 },
                     { "COA", 8 }
     };
+                student1.AcademicSubjects = new List<AcademicSubject>
+{
+    // ===== FIRST YEAR =====
+    new AcademicSubject { YearLevel = 1, Semester = "1st", SubjectName = "Programming 1", Units = 3, Grade = 85 },
+    new AcademicSubject { YearLevel = 1, Semester = "1st", SubjectName = "Math 1", Units = 3, Grade = 80 },
+
+    new AcademicSubject { YearLevel = 1, Semester = "2nd", SubjectName = "Programming 2", Units = 3, Grade = 82 },
+    new AcademicSubject { YearLevel = 1, Semester = "2nd", SubjectName = "Math 2", Units = 3, Grade = 78 },
+
+    new AcademicSubject { YearLevel = 1, Semester = "Midyear", SubjectName = "NSTP", Units = 3, Grade = 90 },
+
+    // ===== SECOND YEAR (CURRENT) =====
+    new AcademicSubject { YearLevel = 2, Semester = "1st", SubjectName = "Data Structures", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 2, Semester = "2nd", SubjectName = "OOP", Units = 3, Grade = 0 }
+
+};
+                student1.AcademicRecord =
+    new Dictionary<string, Dictionary<string, (int Units, double? Grade)>>()
+{
+    {
+        "1st Year - 1st Semester",
+        new Dictionary<string, (int, double?)>
+        {
+            { "Calculus 1", (3, 85) },
+            { "Programming 1", (3, 88) },
+            { "PE", (2, 90) }
+        }
+    },
+    {
+        "1st Year - 2nd Semester",
+        new Dictionary<string, (int, double?)>
+        {
+            { "Calculus 2", (3, 82) },
+            { "Programming 2", (3, 86) }
+        }
+    },
+    {
+        "1st Year - MidYear",
+        new Dictionary<string, (int, double?)>
+        {
+            { "NSTP", (3, 95) }
+        }
+    },
+    {
+        "2nd Year - 1st Semester",
+        new Dictionary<string, (int, double?)>
+        {
+            { "Data Structures", (3, null) },
+            { "OOP", (3, null) }
+        }
+    },
+    {
+        "2nd Year - 2nd Semester",
+        new Dictionary<string, (int, double?)>
+        {
+            { "Database Systems", (3, null) }
+        }
+    }
+};
                 student1.FirstTermBalance = 10500;   
                 student1.MidTermBalance = 12000;    
                 student1.MidYearBalance = 8500;     
@@ -103,6 +162,7 @@ namespace FinalProject
         }
     }
 };
+
                 studRepo.UpdateStudent(student1);
             }
 

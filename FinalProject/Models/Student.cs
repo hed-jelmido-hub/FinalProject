@@ -30,6 +30,12 @@ namespace FinalProject.Models
         public double MidYearBalance { get; set; }
         public double FinalTermBalance { get; set; }
         public string ScheduleJson { get; set; }
+        public string AcademicRecordJson { get; set; }
+        [Ignore]
+        public Dictionary<string, Dictionary<string, (int Units, double? Grade)>> AcademicRecord
+        { get; set; } = new();
+        [Ignore]
+        public List<AcademicSubject> AcademicSubjects { get; set; } = new();
         [Ignore]
         public Dictionary<string, List<ScheduleEntry>> Schedule { get; set; } = new Dictionary<string, List<ScheduleEntry>>();
         [Ignore]
@@ -39,6 +45,15 @@ namespace FinalProject.Models
         [Ignore]
         public Dictionary<string, double> SubjectsGrades { get; set; } 
             = new Dictionary<string, double>();
+        public class AcademicSubject
+        {
+            public int YearLevel { get; set; }   
+            public string Semester { get; set; } 
+            public string SubjectName { get; set; }
+            public int Units { get; set; }
+            public double Grade { get; set; }
+            
+        }
 
         public Student(string password,string studentId, string first,
         string last , string email, string courseAndYear,
