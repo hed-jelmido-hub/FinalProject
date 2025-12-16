@@ -24,17 +24,17 @@ namespace FinalProject
             LoadScheduleTab(_student);
             LoadTab3AcademicOverview();
             //LoadGradesTab();
-            this.WindowState = FormWindowState.Maximized;
+
 
         }
         private void LoadTab3AcademicOverview()
         {
             flowLayoutPanelTab3.Controls.Clear();
 
-          
+
             for (int year = 1; year <= 4; year++)
             {
-               
+
                 Label lblYear = new Label
                 {
                     Text = $"YEAR {year}",
@@ -44,8 +44,8 @@ namespace FinalProject
                 };
                 flowLayoutPanelTab3.Controls.Add(lblYear);
 
-               
-                string yearPrefix = $"{year}st Year"; 
+
+                string yearPrefix = $"{year}st Year";
                 if (year == 2) yearPrefix = "2nd Year";
                 if (year == 3) yearPrefix = "3rd Year";
                 if (year == 4) yearPrefix = "4th Year";
@@ -63,7 +63,7 @@ namespace FinalProject
                     }
                     else
                     {
-                       
+
                         Panel emptySemPanel = CreateSemesterPanel(key, new Dictionary<string, (int Units, double? Grade)>());
                         flowLayoutPanelTab3.Controls.Add(emptySemPanel);
                     }
@@ -80,7 +80,7 @@ namespace FinalProject
                 Margin = new Padding(30, 0, 10, 10)
             };
 
-           
+
             Label lblSemester = new Label
             {
                 Text = semesterName,
@@ -708,6 +708,11 @@ namespace FinalProject
                               "Log out Successful", MessageBoxButtons.OK,
                               MessageBoxIcon.Information);
             Application.Exit();
+        }
+
+        private void tableLayoutPanelGrades_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
