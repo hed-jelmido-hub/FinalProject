@@ -29,47 +29,47 @@ namespace FinalProject
         private void LoadTab3AcademicOverview()
         {
             flowLayoutPanelTab3.Controls.Clear();
-            flowLayoutPanelTab3.AutoScroll = true;
 
-            if (_student?.AcademicRecord == null)
-                return;
-
-            // Group by Year (key before '-')
-            var groupedByYear = _student.AcademicRecord
-                .GroupBy(k => k.Key.Split('-')[0].Trim());
-
-            foreach (var yearGroup in groupedByYear)
+          
+            for (int year = 1; year <= 4; year++)
             {
-                // Year label
-                Label yearLabel = new Label
+               
+                Label lblYear = new Label
                 {
-                    Text = yearGroup.Key, // e.g., "1st Year"
+                    Text = $"YEAR {year}",
                     Font = new Font("Segoe UI", 12, FontStyle.Bold),
                     AutoSize = true,
-                    Margin = new Padding(10)
+                    Margin = new Padding(10, 20, 10, 5)
                 };
-                flowLayoutPanelTab3.Controls.Add(yearLabel);
+                flowLayoutPanelTab3.Controls.Add(lblYear);
 
-                // Row for semesters
-                FlowLayoutPanel semesterRow = new FlowLayoutPanel
-                {
-                    FlowDirection = FlowDirection.LeftToRight,
-                    AutoSize = true,
-                    Margin = new Padding(20, 5, 0, 20)
-                };
+               
+                string yearPrefix = $"{year}st Year"; 
+                if (year == 2) yearPrefix = "2nd Year";
+                if (year == 3) yearPrefix = "3rd Year";
+                if (year == 4) yearPrefix = "4th Year";
 
-                foreach (var semester in yearGroup)
+                string[] semesters = { "1st Semester", "2nd Semester", "MidYear" };
+
+                foreach (var sem in semesters)
                 {
-                    Panel semesterPanel = CreateSemesterPanel(
-                        semester.Key,       // e.g., "1st Year - 1st Semester"
-                        semester.Value      // Dictionary<string, (Units, Grade)>
-                    );
-                    semesterRow.Controls.Add(semesterPanel);
+                    string key = $"{yearPrefix} - {sem}";
+                    if (_student.AcademicRecord.ContainsKey(key))
+                    {
+                        var semesterSubjects = _student.AcademicRecord[key];
+                        Panel semPanel = CreateSemesterPanel(key, semesterSubjects);
+                        flowLayoutPanelTab3.Controls.Add(semPanel);
+                    }
+                    else
+                    {
+                       
+                        Panel emptySemPanel = CreateSemesterPanel(key, new Dictionary<string, (int Units, double? Grade)>());
+                        flowLayoutPanelTab3.Controls.Add(emptySemPanel);
+                    }
                 }
-
-                flowLayoutPanelTab3.Controls.Add(semesterRow);
             }
         }
+
         private Panel CreateSemesterPanel(string semesterName, Dictionary<string, (int Units, double? Grade)> subjects)
         {
             Panel panel = new Panel
@@ -79,7 +79,7 @@ namespace FinalProject
                 Margin = new Padding(30, 0, 10, 10)
             };
 
-            // Optional: show semester name on top of this panel
+           
             Label lblSemester = new Label
             {
                 Text = semesterName,
@@ -111,7 +111,9 @@ namespace FinalProject
                 var lblGrade = new Label
                 {
                     Text = subj.Value.Grade?.ToString() ?? "-",
-                    BackColor = subj.Value.Grade.HasValue && subj.Value.Grade.Value < 75 ? Color.Tomato : Color.Transparent,
+                    BackColor = subj.Value.Grade.HasValue && subj.Value.Grade.Value < 75 ? Color.Tomato :
+                                  subj.Value.Grade.HasValue && subj.Value.Grade.Value == 75 ? Color.Yellow :
+                                  Color.Transparent,
                     Margin = new Padding(5),
                     AutoSize = true
                 };

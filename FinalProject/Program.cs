@@ -74,63 +74,114 @@ namespace FinalProject
     };
                 student1.AcademicSubjects = new List<AcademicSubject>
 {
-    // ===== FIRST YEAR =====
+    // FIRST YEAR
     new AcademicSubject { YearLevel = 1, Semester = "1st", SubjectName = "Programming 1", Units = 3, Grade = 85 },
     new AcademicSubject { YearLevel = 1, Semester = "1st", SubjectName = "Math 1", Units = 3, Grade = 80 },
-
     new AcademicSubject { YearLevel = 1, Semester = "2nd", SubjectName = "Programming 2", Units = 3, Grade = 82 },
     new AcademicSubject { YearLevel = 1, Semester = "2nd", SubjectName = "Math 2", Units = 3, Grade = 78 },
-
     new AcademicSubject { YearLevel = 1, Semester = "Midyear", SubjectName = "NSTP", Units = 3, Grade = 90 },
 
-    // ===== SECOND YEAR (CURRENT) =====
-    new AcademicSubject { YearLevel = 2, Semester = "1st", SubjectName = "Data Structures", Units = 3, Grade = 0 },
-    new AcademicSubject { YearLevel = 2, Semester = "2nd", SubjectName = "OOP", Units = 3, Grade = 0 }
+    //  SECOND YEAR 
+    new AcademicSubject { YearLevel = 2, Semester = "1st", SubjectName = "Data Structures", Units = 3, Grade = 75 },
+    new AcademicSubject { YearLevel = 2, Semester = "1st", SubjectName = "Calculus 3", Units = 3, Grade = 80 },
+    new AcademicSubject { YearLevel = 2, Semester = "2nd", SubjectName = "OOP", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 2, Semester = "2nd", SubjectName = "Discrete Math", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 2, Semester = "Midyear", SubjectName = "PE", Units = 2, Grade = 0 },
 
+    //  THIRD YEAR
+    new AcademicSubject { YearLevel = 3, Semester = "1st", SubjectName = "Database Systems", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "1st", SubjectName = "Computer Networks", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "2nd", SubjectName = "AI Fundamentals", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "2nd", SubjectName = "Software Engineering", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "Midyear", SubjectName = "Elective 1", Units = 3, Grade = 0 },
+
+    // FOURTH YEAR 
+    new AcademicSubject { YearLevel = 4, Semester = "1st", SubjectName = "Machine Learning", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "1st", SubjectName = "Web Development", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "2nd", SubjectName = "Capstone Project", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "2nd", SubjectName = "Elective 2", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "Midyear", SubjectName = "Internship", Units = 3, Grade = 0 }
 };
-                student1.AcademicRecord =
-    new Dictionary<string, Dictionary<string, (int Units, double? Grade)>>()
+
+                student1.AcademicRecord = new Dictionary<string, Dictionary<string, (int Units, double? Grade)>>
 {
-    {
-        "1st Year - 1st Semester",
-        new Dictionary<string, (int, double?)>
+    // FIRST YEAR
+    { "1st Year - 1st Semester", new Dictionary<string, (int, double?)>
         {
-            { "Calculus 1", (3, 85) },
-            { "Programming 1", (3, 88) },
-            { "PE", (2, 90) }
+            { "Programming 1", (3, 85) },
+            { "Math 1", (3, 80) }
         }
     },
-    {
-        "1st Year - 2nd Semester",
-        new Dictionary<string, (int, double?)>
+    { "1st Year - 2nd Semester", new Dictionary<string, (int, double?)>
         {
-            { "Calculus 2", (3, 82) },
-            { "Programming 2", (3, 86) }
+            { "Programming 2", (3, 82) },
+            { "Math 2", (3, 78) }
         }
     },
-    {
-        "1st Year - MidYear",
-        new Dictionary<string, (int, double?)>
+    { "1st Year - Midyear", new Dictionary<string, (int, double?)>
         {
-            { "NSTP", (3, 95) }
+            { "NSTP", (3, 90) }
         }
     },
-    {
-        "2nd Year - 1st Semester",
-        new Dictionary<string, (int, double?)>
+
+    //  SECOND YEAR
+    { "2nd Year - 1st Semester", new Dictionary<string, (int, double?)>
         {
-            { "Data Structures", (3, null) },
-            { "OOP", (3, null) }
+            { "Data Structures", (3, 75) },
+            { "Calculus 3", (3, 80) }
         }
     },
-    {
-        "2nd Year - 2nd Semester",
-        new Dictionary<string, (int, double?)>
+    { "2nd Year - 2nd Semester", new Dictionary<string, (int, double?)>
         {
-            { "Database Systems", (3, null) }
+            { "OOP", (3, null) },
+            { "Discrete Math", (3, null) }
+        }
+    },
+    { "2nd Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "PE", (2, null) }
+        }
+    },
+
+    // THIRD YEAR 
+    { "3rd Year - 1st Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Database Systems", (3, null) },
+            { "Computer Networks", (3, null) }
+        }
+    },
+    { "3rd Year - 2nd Semester", new Dictionary<string, (int, double?)>
+        {
+            { "AI Fundamentals", (3, null) },
+            { "Software Engineering", (3, null) }
+        }
+    },
+    { "3rd Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "Elective 1", (3, null) }
+        }
+    },
+
+    // ===== FOURTH YEAR =====
+    { "4th Year - 1st Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Machine Learning", (3, null) },
+            { "Web Development", (3, null) }
+        }
+    },
+    { "4th Year - 2nd Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Capstone Project", (3, null) },
+            { "Elective 2", (3, null) }
+        }
+    },
+    { "4th Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "Internship", (3, null) }
         }
     }
 };
+
                 student1.FirstTermBalance = 10500;   
                 student1.MidTermBalance = 12000;    
                 student1.MidYearBalance = 8500;     
@@ -212,6 +263,116 @@ namespace FinalProject
                 { "Calculus", 2 },
                 { "COA", 1 }
     };
+                student2.AcademicSubjects = new List<AcademicSubject>
+{
+    // FIRST YEAR
+    new AcademicSubject { YearLevel = 1, Semester = "1st", SubjectName = "Programming 1", Units = 3, Grade = 95 },
+    new AcademicSubject { YearLevel = 1, Semester = "1st", SubjectName = "Math 1", Units = 3, Grade = 88 },
+    new AcademicSubject { YearLevel = 1, Semester = "2nd", SubjectName = "Programming 2", Units = 3, Grade = 90 },
+    new AcademicSubject { YearLevel = 1, Semester = "2nd", SubjectName = "Math 2", Units = 3, Grade = 88 },
+    new AcademicSubject { YearLevel = 1, Semester = "Midyear", SubjectName = "NSTP", Units = 3, Grade = 90 },
+
+    //  SECOND YEAR 
+    new AcademicSubject { YearLevel = 2, Semester = "1st", SubjectName = "Data Structures", Units = 3, Grade = 90 },
+    new AcademicSubject { YearLevel = 2, Semester = "1st", SubjectName = "Calculus 3", Units = 3, Grade = 88 },
+    new AcademicSubject { YearLevel = 2, Semester = "2nd", SubjectName = "OOP", Units = 3, Grade = 80 },
+    new AcademicSubject { YearLevel = 2, Semester = "2nd", SubjectName = "Discrete Math", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 2, Semester = "Midyear", SubjectName = "PE", Units = 2, Grade = 0 },
+
+    //  THIRD YEAR
+    new AcademicSubject { YearLevel = 3, Semester = "1st", SubjectName = "Database Systems", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "1st", SubjectName = "Computer Networks", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "2nd", SubjectName = "AI Fundamentals", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "2nd", SubjectName = "Software Engineering", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "Midyear", SubjectName = "Elective 1", Units = 3, Grade = 0 },
+
+    // FOURTH YEAR 
+    new AcademicSubject { YearLevel = 4, Semester = "1st", SubjectName = "Machine Learning", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "1st", SubjectName = "Web Development", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "2nd", SubjectName = "Capstone Project", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "2nd", SubjectName = "Elective 2", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "Midyear", SubjectName = "Internship", Units = 3, Grade = 0 }
+};
+
+                student2.AcademicRecord = new Dictionary<string, Dictionary<string, (int Units, double? Grade)>>
+{
+    // FIRST YEAR
+    { "1st Year - 1st Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Programming 1", (3, 85) },
+            { "Math 1", (3, 80) }
+        }
+    },
+    { "1st Year - 2nd Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Programming 2", (3, 82) },
+            { "Math 2", (3, 78) }
+        }
+    },
+    { "1st Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "NSTP", (3, 90) }
+        }
+    },
+
+    //  SECOND YEAR
+    { "2nd Year - 1st Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Data Structures", (3, 75) },
+            { "Calculus 3", (3, 80) }
+        }
+    },
+    { "2nd Year - 2nd Semester", new Dictionary<string, (int, double?)>
+        {
+            { "OOP", (3, null) },
+            { "Discrete Math", (3, null) }
+        }
+    },
+    { "2nd Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "PE", (2, null) }
+        }
+    },
+
+    // THIRD YEAR 
+    { "3rd Year - 1st Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Database Systems", (3, null) },
+            { "Computer Networks", (3, null) }
+        }
+    },
+    { "3rd Year - 2nd Semester", new Dictionary<string, (int, double?)>
+        {
+            { "AI Fundamentals", (3, null) },
+            { "Software Engineering", (3, null) }
+        }
+    },
+    { "3rd Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "Elective 1", (3, null) }
+        }
+    },
+
+    // ===== FOURTH YEAR =====
+    { "4th Year - 1st Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Machine Learning", (3, null) },
+            { "Web Development", (3, null) }
+        }
+    },
+    { "4th Year - 2nd Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Capstone Project", (3, null) },
+            { "Elective 2", (3, null) }
+        }
+    },
+    { "4th Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "Internship", (3, null) }
+        }
+    }
+};
+
                 student2.FirstTermBalance = 9700;
                 student2.MidTermBalance = 11000;
                 student2.MidYearBalance = 8100;
@@ -293,6 +454,117 @@ namespace FinalProject
                 { "Calculus", 2 },
                 { "COA", 6 }
     };
+                student3.AcademicSubjects = new List<AcademicSubject>
+{
+    // FIRST YEAR
+    new AcademicSubject { YearLevel = 1, Semester = "1st", SubjectName = "Programming 1", Units = 3, Grade = 75 },
+    new AcademicSubject { YearLevel = 1, Semester = "1st", SubjectName = "Math 1", Units = 3, Grade = 80 },
+    new AcademicSubject { YearLevel = 1, Semester = "2nd", SubjectName = "Programming 2", Units = 3, Grade = 74 },
+    new AcademicSubject { YearLevel = 1, Semester = "2nd", SubjectName = "Math 2", Units = 3, Grade = 78 },
+    new AcademicSubject { YearLevel = 1, Semester = "Midyear", SubjectName = "NSTP", Units = 3, Grade = 90 },
+
+    //  SECOND YEAR 
+    new AcademicSubject { YearLevel = 2, Semester = "1st", SubjectName = "Data Structures", Units = 3, Grade = 75 },
+    new AcademicSubject { YearLevel = 2, Semester = "1st", SubjectName = "Calculus 3", Units = 3, Grade = 79 },
+    new AcademicSubject { YearLevel = 2, Semester = "1st", SubjectName = "GSelf", Units = 3, Grade = 74 },
+    new AcademicSubject { YearLevel = 2, Semester = "2nd", SubjectName = "OOP", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 2, Semester = "2nd", SubjectName = "Discrete Math", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 2, Semester = "Midyear", SubjectName = "PE", Units = 2, Grade = 0 },
+
+    //  THIRD YEAR
+    new AcademicSubject { YearLevel = 3, Semester = "1st", SubjectName = "Database Systems", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "1st", SubjectName = "Computer Networks", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "2nd", SubjectName = "AI Fundamentals", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "2nd", SubjectName = "Software Engineering", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 3, Semester = "Midyear", SubjectName = "Elective 1", Units = 3, Grade = 0 },
+
+    // FOURTH YEAR 
+    new AcademicSubject { YearLevel = 4, Semester = "1st", SubjectName = "Machine Learning", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "1st", SubjectName = "Web Development", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "2nd", SubjectName = "Capstone Project", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "2nd", SubjectName = "Elective 2", Units = 3, Grade = 0 },
+    new AcademicSubject { YearLevel = 4, Semester = "Midyear", SubjectName = "Internship", Units = 3, Grade = 0 }
+};
+
+                student3.AcademicRecord = new Dictionary<string, Dictionary<string, (int Units, double? Grade)>>
+{
+    // FIRST YEAR
+    { "1st Year - 1st Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Programming 1", (3, 85) },
+            { "Math 1", (3, 80) }
+        }
+    },
+    { "1st Year - 2nd Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Programming 2", (3, 82) },
+            { "Math 2", (3, 78) }
+        }
+    },
+    { "1st Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "NSTP", (3, 90) }
+        }
+    },
+
+    //  SECOND YEAR
+    { "2nd Year - 1st Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Data Structures", (3, 75) },
+            { "Calculus 3", (3, 80) }
+        }
+    },
+    { "2nd Year - 2nd Semester", new Dictionary<string, (int, double?)>
+        {
+            { "OOP", (3, null) },
+            { "Discrete Math", (3, null) }
+        }
+    },
+    { "2nd Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "PE", (2, null) }
+        }
+    },
+
+    // THIRD YEAR 
+    { "3rd Year - 1st Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Database Systems", (3, null) },
+            { "Computer Networks", (3, null) }
+        }
+    },
+    { "3rd Year - 2nd Semester", new Dictionary<string, (int, double?)>
+        {
+            { "AI Fundamentals", (3, null) },
+            { "Software Engineering", (3, null) }
+        }
+    },
+    { "3rd Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "Elective 1", (3, null) }
+        }
+    },
+
+    // ===== FOURTH YEAR =====
+    { "4th Year - 1st Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Machine Learning", (3, null) },
+            { "Web Development", (3, null) }
+        }
+    },
+    { "4th Year - 2nd Semester", new Dictionary<string, (int, double?)>
+        {
+            { "Capstone Project", (3, null) },
+            { "Elective 2", (3, null) }
+        }
+    },
+    { "4th Year - Midyear", new Dictionary<string, (int, double?)>
+        {
+            { "Internship", (3, null) }
+        }
+    }
+};
+
                 student3.FirstTermBalance = 11700;
                 student3.MidTermBalance = 15950;
                 student3.MidYearBalance = 1610;
