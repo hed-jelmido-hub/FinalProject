@@ -24,6 +24,7 @@ namespace FinalProject
             LoadScheduleTab(_student);
             LoadTab3AcademicOverview();
             //LoadGradesTab();
+            this.WindowState = FormWindowState.Maximized;
 
         }
         private void LoadTab3AcademicOverview()
