@@ -62,7 +62,6 @@ namespace FinalProject
             flowLayoutPanelSchedule = new FlowLayoutPanel();
             label11 = new Label();
             tableLayoutPanelBalance = new TableLayoutPanel();
-            labelMidTerm = new Label();
             labelFinals = new Label();
             labelMidYear = new Label();
             labelFirstTermV = new Label();
@@ -70,6 +69,7 @@ namespace FinalProject
             labelMidTermV = new Label();
             labelFinalsV = new Label();
             labelMidYearV = new Label();
+            labelMidTerm = new Label();
             label10 = new Label();
             flowLayoutPanelAbsences = new FlowLayoutPanel();
             label9 = new Label();
@@ -404,10 +404,10 @@ namespace FinalProject
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Saint_Mary_s_University_Main_Emblem_1_1536x1536;
-            pictureBox2.Location = new Point(127, 9);
+            pictureBox2.Location = new Point(128, 0);
             pictureBox2.Margin = new Padding(4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(111, 78);
+            pictureBox2.Size = new Size(80, 53);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 11;
             pictureBox2.TabStop = false;
@@ -416,7 +416,7 @@ namespace FinalProject
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(245, 29);
+            label13.Location = new Point(217, 0);
             label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
             label13.Size = new Size(562, 32);
@@ -428,7 +428,7 @@ namespace FinalProject
             // 
             labelAbsences.AutoSize = true;
             labelAbsences.Font = new Font("Segoe UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            labelAbsences.Location = new Point(168, 796);
+            labelAbsences.Location = new Point(590, 440);
             labelAbsences.Margin = new Padding(2, 0, 2, 0);
             labelAbsences.Name = "labelAbsences";
             labelAbsences.Size = new Size(155, 38);
@@ -440,7 +440,7 @@ namespace FinalProject
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label12.Location = new Point(164, 425);
+            label12.Location = new Point(132, 441);
             label12.Margin = new Padding(2, 0, 2, 0);
             label12.Name = "label12";
             label12.Size = new Size(156, 38);
@@ -451,10 +451,10 @@ namespace FinalProject
             // 
             flowLayoutPanelSchedule.AutoScroll = true;
             flowLayoutPanelSchedule.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanelSchedule.Location = new Point(168, 480);
+            flowLayoutPanelSchedule.Location = new Point(136, 496);
             flowLayoutPanelSchedule.Margin = new Padding(2);
             flowLayoutPanelSchedule.Name = "flowLayoutPanelSchedule";
-            flowLayoutPanelSchedule.Size = new Size(962, 298);
+            flowLayoutPanelSchedule.Size = new Size(417, 298);
             flowLayoutPanelSchedule.TabIndex = 8;
             flowLayoutPanelSchedule.WrapContents = false;
             flowLayoutPanelSchedule.Paint += flowLayoutPanelSchedule_Paint;
@@ -463,7 +463,7 @@ namespace FinalProject
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label11.Location = new Point(508, 130);
+            label11.Location = new Point(494, 50);
             label11.Margin = new Padding(2, 0, 2, 0);
             label11.Name = "label11";
             label11.Size = new Size(123, 32);
@@ -477,7 +477,6 @@ namespace FinalProject
             tableLayoutPanelBalance.ColumnCount = 2;
             tableLayoutPanelBalance.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanelBalance.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanelBalance.Controls.Add(labelMidTerm, 0, 1);
             tableLayoutPanelBalance.Controls.Add(labelFinals, 0, 2);
             tableLayoutPanelBalance.Controls.Add(labelMidYear, 0, 3);
             tableLayoutPanelBalance.Controls.Add(labelFirstTermV, 1, 0);
@@ -485,7 +484,8 @@ namespace FinalProject
             tableLayoutPanelBalance.Controls.Add(labelMidTermV, 1, 1);
             tableLayoutPanelBalance.Controls.Add(labelFinalsV, 1, 2);
             tableLayoutPanelBalance.Controls.Add(labelMidYearV, 1, 3);
-            tableLayoutPanelBalance.Location = new Point(508, 167);
+            tableLayoutPanelBalance.Controls.Add(labelMidTerm, 0, 1);
+            tableLayoutPanelBalance.Location = new Point(494, 87);
             tableLayoutPanelBalance.Margin = new Padding(2);
             tableLayoutPanelBalance.Name = "tableLayoutPanelBalance";
             tableLayoutPanelBalance.RowCount = 4;
@@ -496,17 +496,6 @@ namespace FinalProject
             tableLayoutPanelBalance.Size = new Size(636, 192);
             tableLayoutPanelBalance.TabIndex = 6;
             tableLayoutPanelBalance.Paint += tableLayoutPanelBalance_Paint;
-            // 
-            // labelMidTerm
-            // 
-            labelMidTerm.AutoSize = true;
-            labelMidTerm.Location = new Point(3, 57);
-            labelMidTerm.Margin = new Padding(2, 0, 2, 0);
-            labelMidTerm.Name = "labelMidTerm";
-            labelMidTerm.Size = new Size(80, 25);
-            labelMidTerm.TabIndex = 1;
-            labelMidTerm.Text = "Midterm";
-            labelMidTerm.Click += labelMidTerm_Click;
             // 
             // labelFinals
             // 
@@ -585,11 +574,22 @@ namespace FinalProject
             labelMidYearV.Text = "₱";
             labelMidYearV.Click += labelMidYearV_Click;
             // 
+            // labelMidTerm
+            // 
+            labelMidTerm.AutoSize = true;
+            labelMidTerm.Location = new Point(3, 57);
+            labelMidTerm.Margin = new Padding(2, 0, 2, 0);
+            labelMidTerm.Name = "labelMidTerm";
+            labelMidTerm.Size = new Size(80, 25);
+            labelMidTerm.TabIndex = 1;
+            labelMidTerm.Text = "Midterm";
+            labelMidTerm.Click += labelMidTerm_Click;
+            // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label10.Location = new Point(178, 130);
+            label10.Location = new Point(164, 50);
             label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
             label10.Size = new Size(296, 32);
@@ -599,10 +599,10 @@ namespace FinalProject
             // flowLayoutPanelAbsences
             // 
             flowLayoutPanelAbsences.Controls.Add(label9);
-            flowLayoutPanelAbsences.Location = new Point(168, 852);
+            flowLayoutPanelAbsences.Location = new Point(590, 496);
             flowLayoutPanelAbsences.Margin = new Padding(2);
             flowLayoutPanelAbsences.Name = "flowLayoutPanelAbsences";
-            flowLayoutPanelAbsences.Size = new Size(894, 390);
+            flowLayoutPanelAbsences.Size = new Size(594, 390);
             flowLayoutPanelAbsences.TabIndex = 1;
             flowLayoutPanelAbsences.Paint += flowLayoutPanelAbsences_Paint;
             // 
@@ -624,7 +624,7 @@ namespace FinalProject
             tableLayoutPanelGrades.ColumnCount = 2;
             tableLayoutPanelGrades.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanelGrades.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanelGrades.Location = new Point(178, 167);
+            tableLayoutPanelGrades.Location = new Point(164, 87);
             tableLayoutPanelGrades.Margin = new Padding(2);
             tableLayoutPanelGrades.Name = "tableLayoutPanelGrades";
             tableLayoutPanelGrades.Size = new Size(319, 191);
